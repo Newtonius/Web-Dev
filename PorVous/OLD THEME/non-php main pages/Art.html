@@ -1,0 +1,172 @@
+<?php
+
+$ip=$_SERVER['REMOTE_ADDR'];
+// echo "IP address= $ip"; 
+$time = time();
+
+$log = $ip. " , ".$time;
+
+$file = './log.txt';
+
+file_put_contents($file, $log .PHP_EOL, FILE_APPEND);
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PorVous | Art</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta HTTP-EQUIV="Expires" CONTENT="-1">
+        <link rel="stylesheet" href="http://Porvous.com/CSS/porvousDesign.css" type="text/css">
+        <link rel="stylesheet" href="http://Porvous.com/CSS/sectionBody.css" type="text/css">
+        <link rel="shortcut icon" href="http://Porvous.com/GFX/siteGFX/icon_heart1.png">
+        <link href='http://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+<style>
+    h3 {
+        font-size: 16pt;
+        font-family: sans-serif;
+        background:rgba(0,0,0,0.5);
+        padding: 20px;
+        transition: padding 0.25s ease-in-out;
+    }
+    h3:hover {
+        padding: 25px;
+    }
+    .robertGallery {
+        background: URL("http://Porvous.com/GFX/artGFX/myPhotoshop/image011.jpg") center no-repeat;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 572px; height: 389px;
+        margin: 20px 20px;
+    }
+</style>
+ <!--
+ <script src="arrowButton.js" type="text/javascript"></script>
+ -->
+</head>
+<body>
+    <header>
+        <div>
+            <p>
+                <a class="secret" href="http://Porvous.com/Sub/Poems/Poems.html" target="_blank">
+                    <img src="http://Porvous.com/GFX/siteGFX/icon_heart1.png" alt="PorVous" width="50" height="56"/>
+                </a>
+                <span class="URLName">PorVous</span>
+                <br>
+                <span class="dedication">
+                    - A gift to my inspiration; My schmetterling
+                </span>
+            </p>
+        </div>
+        <div>
+            <ul id="mainNavBar">
+                <a href="http://Porvous.com/Home.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/home-icon.png" align="left" width="30" height="30" alt="" />
+                        Home</li>
+                </a>
+                <a href="http://Porvous.com/Art.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Art-icon.png" align="left" width="30" height="30" alt="" />
+                        Art</li>
+                </a>
+                <a href="http://Porvous.com/Science.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Science-icon.png" align="left" width="30" height="30" alt="" />
+                        Science</li>
+                </a>
+                <a href="http://Porvous.com/History.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/History-icon.png" align="left" width="30" height="30" alt="" />
+                        History</li>
+                </a>
+                <a href="http://Porvous.com/Travel.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Travel-icon.png" align="left" width="30" height="30" alt="" />
+                        Travel</li>
+                </a>
+                <a href="http://Porvous.com/Blog.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Blog-icon.png" align="left" width="30" height="30" alt="" />
+                        Blog</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+    <div id="foreground">
+        <div class="homeBox">
+            <p>This section best viewed in Chrome and sort of okay in Firefox. Whatcha' gonna' do?..</p>
+        </div>
+        <div>
+            <table class="sectionBody">
+                <thead>
+                    <tr>
+                        <th>Oh ja ;)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <center>  
+                                <figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic001.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic002.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic003.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic004.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic005.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic006.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic007.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic008.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic009.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic010.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic011.jpg" alt=""/>
+                                </figure><figure>
+                                <img src="http://Porvous.com/GFX/artGFX/FruitHW/Pic012.jpg" alt=""/>
+                                </figure>
+                            </center>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table class="sectionBody">
+                <thead>
+                    <tr>
+                        <th>Photoshop!!</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="robertGallery">
+                                <a href="http://Porvous.com/Sub/Art/RobertsGallery.html" target="_self">
+                                    <h3>
+                                        Check out my Photoshop Gallery!
+                                    </h3>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="http://www.aprelium.com/" target="_blank">
+            <img src="http://Porvous.com/GFX/siteGFX/abyss.gif" alt="Powered By Abyss Web Server" />
+        </a>
+        <p style="text-align: center; font-family: 'Poppins', sans-serif;">
+        <a href="http://onskedrom.weebly.com/" target="_blank">
+            My Schmetterling's blog</a>
+        </p>
+    </div>
+</body>
+</html>

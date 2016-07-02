@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+    /* Centering the inputs */
+      .body {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+      }
+
+      header {
+        background: rgb(81,81,81);
+        width: auto;
+        color: #fff;
+        font-weight: 700;
+        font-size: 3em;
+        font-family: 'Montserrat', sans-serif;
+        padding: 5px;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+
+      .errorPanel {
+        
+      }
+
+    /* Center form */
+      form {
+        margin: 0 auto;
+        width: auto;
+      }
+
+      label {
+        display: block;
+        margin-top: 20px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+    /* Style the text boxes */
+      input, textarea {
+        width: 75%;
+        height: 27px;
+        background: #efefef;
+        border: 1px solid #dedede;
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 0.9em;
+        color: #3a3a3a;
+
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+
+        textarea {
+          width: 100%;
+          height: 213px;
+         /*background: url(images/textarea-bg.jpg) right no-repeat #efefef;*/
+        }
+
+      #submit {
+        width: 127px;
+        height: 38px;
+        /*background: url(images/submit.jpg);
+        text-indent: -9999px;*/
+        background: #dedede;
+        background: linear-gradient(to top left, rgb(91,136,7),rgb(63,98,0),rgb(37,58,1));
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 1em;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        -moz-box-shadow: 0px 0px 0px #000;
+        -webkit-box-shadow: 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px #000;
+        transition: box-shadow 0.15s;
+      }
+
+        #submit:hover {
+          -moz-box-shadow: 0px 3px 5px #000;
+          -webkit-box-shadow: 0px 3px 5px #000;
+          box-shadow: 0px 3px 5px #000;
+        }

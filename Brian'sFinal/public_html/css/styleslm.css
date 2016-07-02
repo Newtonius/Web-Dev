@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*prevents browser from auto-aligning*/
+* {
+margin:0;
+padding:0;	
+	
+}
+
+
+/*Site Header. Width is set to 100%, so header takes up whole width of browser*/
+header{
+height:70px;
+width:100%;
+background-color:#5477af;
+border-bottom:1px solid black;	
+	
+	
+	
+	
+}
+
+/*Menu. Height is set to half of header height. Variation of color for visual effect.  */
+
+menu {
+height:35px;
+width:100%;
+background-color:#4b6b9d;	
+}
+
+/*Used to align the interactive drop down menu to the center of the header*/
+
+#menu_center{
+width:900px;
+height:100%;
+margin-left:auto;
+margin-right:auto;
+	
+	
+}
+
+
+/*Padding & Float formatting & Other Formatting for the menu links*/
+/*Padding & Float formatting & Other Formatting for the menu links*/
+menu a {
+	padding:6px 65px 6px 65px;
+	text-decoration:none;
+	float:left;
+	color:white;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;	
+}
+
+
+/*Menu link Hover Effects*/
+menu a:hover {
+	background-color:#3a537a;
+	height:23px;	
+	
+}
+
+
+/*Removes text-decoration and list style from unordered list*/
+menu ul{
+	text-decoration:none;
+	list-style:none;
+}
+
+
+
+/*Main Content Wrapper specifying style of the main container
+which I split up into a 2 column format*/
+
+/*Box Shadow Effect gives good visuals. Border seperates the two white colors*/
+#wrapper{
+
+width: 1280px;
+height: 720px;
+margin-left:auto;
+margin-right:auto;
+background-color:#ffffff;
+border-left:1px solid #666;
+border-right:1px solid #666;
+-webkit-box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.96);
+-moz-box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.96);
+box-shadow: 1px 5px 10px 2px rgba(0,0,0,0.96);
+}
+
+/*Left/Center side content pane.*/
+#content{
+margin-left:auto;
+margin-right:auto;
+height:100%;
+background-color:#fff;
+	
+}
+
+/*nicely styled frame image. prevents annoying click dragging if image were to be in html*/
+#content_vid{
+width:100%;
+height:100%;		
+	
+}
+
+/*Right side content pane*/
+
+#side{
+float:right;
+height:100%;
+width:0px;
+background-color:#fff;
+	
+	
+}
+
+/*Used to nicely encase content*/
+
+#bubble {
+  min-height: 20px;
+  max-width:400px;
+  margin: .5em 0 10px 20px;  
+  padding: 5px;
+  margin-bottom: 0px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+/*Footer*/
+
+footer{
+height:150px;
+width:100%;
+background-color:#F6F6F6;
+border-top:2px solid black;	
+	
+	
+}
+
+/*Used to align the content of the footer to the center of the footer*/
+
+#footer_center
+{
+width:900px;
+height:145px;
+margin-left:auto;
+margin-right:auto;
+	
+	
+	
+}
+
+/*Footer links */
+
+#footlinks{
+width:435px;
+height:100%;
+border-right:1px solid #333;
+float:left;	
+	
+	
+}
+
+/*Footer Directory*/
+#footdir{
+width:435px;
+height:100%;
+border-left:1px solid #000;
+float:right;	
+		
+	
+}

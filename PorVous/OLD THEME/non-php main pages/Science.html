@@ -1,0 +1,134 @@
+<?php
+
+$ip=$_SERVER['REMOTE_ADDR'];
+// echo "IP address= $ip"; 
+$time = time();
+
+$log = $ip. " , ".$time;
+
+$file = './log.txt';
+
+file_put_contents($file, $log .PHP_EOL, FILE_APPEND);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+        <title>PorVous | Science</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta HTTP-EQUIV="Expires" CONTENT="-1">
+        <link rel="stylesheet" href="http://Porvous.com/CSS/porvousDesign.css" type="text/css">
+        <link rel="stylesheet" href="http://Porvous.com/CSS/sectionBody.css" type="text/css">
+        <link rel="shortcut icon" href="http://Porvous.com/GFX/siteGFX/icon_heart1.png">
+        <link href='http://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+<style>
+    .sectionBody tbody tr td figure {
+        margin: 5px;
+        width: 175px; height: 175px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div>
+            <p>
+                <a class="secret" href="http://Porvous.com/Sub/Poems/Poems.html" target="_blank">
+                    <img src="http://Porvous.com/GFX/siteGFX/icon_heart1.png" alt="PorVous" width="50" height="56"/>
+                </a>
+                <span class="URLName">PorVous</span>
+                <br>
+                <span class="dedication">
+                    - A gift to my inspiration; My schmetterling
+                </span>
+            </p>
+        </div>
+        <div>
+            <ul id="mainNavBar">
+                <a href="http://Porvous.com/Home.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/home-icon.png" align="left" width="30" height="30" alt="" />
+                        Home</li>
+                </a>
+                <a href="http://Porvous.com/Art.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Art-icon.png" align="left" width="30" height="30" alt="" />
+                        Art</li>
+                </a>
+                <a href="http://Porvous.com/Science.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Science-icon.png" align="left" width="30" height="30" alt="" />
+                        Science</li>
+                </a>
+                <a href="http://Porvous.com/History.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/History-icon.png" align="left" width="30" height="30" alt="" />
+                        History</li>
+                </a>
+                <a href="http://Porvous.com/Travel.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Travel-icon.png" align="left" width="30" height="30" alt="" />
+                        Travel</li>
+                </a>
+                <a href="http://Porvous.com/Blog.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Blog-icon.png" align="left" width="30" height="30" alt="" />
+                        Blog</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+    <div id="foreground">
+        <div>
+            <table class="sectionBody">
+                <thead>
+                    <tr>
+                        <th>Quizzes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h3 style="color: #ffffff">THESE QUIZZES ARE STILL UNFINISHED 
+                                (I had little time to make them...)
+                            </h3>
+                            <br>  
+                            <p>
+                                <span style="color: #FF0000;">First</span> 
+                                <span style="color: #ffffff;">Aid</span> 
+                                Quiz<br>
+                                <span style="color: beige; font-size: 14pt;">
+                                    Someone's in need of first aid, do you have what it takes to tear open a rib cage
+                                    and take out their delicious insides? Find out here ;)..
+                                </span>
+                            </p>
+                            <figure>
+                                <a href="http://Porvous.com/Sub/Science/FirstAidQuiz.html" target="_self">
+                                    <img src="http://Porvous.com/GFX/scienceGFX/quizIcon/Aid.jpg" alt="First Aid Quiz" />
+                                </a>
+                            </figure><br><br><br><br>
+                            <p>
+                                Misc Science Quiz 1<br>
+                                <span style="color: beige; font-size: 14pt;">
+                                    My 5 year old cousin just took this quiz and now he's Phi Beta Kappa at M.I.T. 
+                                    that smug Little shit.. Are you smarter than a 5 year old certified genius? Find
+                                    out!
+                                </span>
+                            </p>
+                            <figure>
+                                <a href="http://Porvous.com/Sub/Science/MiscScienceQuizOne.html" target="_self">
+                                    <img src="http://Porvous.com/GFX/scienceGFX/quizIcon/ScienceQuiz1.png" alt="First Aid Quiz" />
+                                </a>
+                            </figure>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+        </div>
+    </div> 
+    <div id="footer">
+        <a href="http://www.aprelium.com/" target="_blank">
+            <img src="http://Porvous.com/GFX/siteGFX/abyss.gif" alt="Powered By Abyss Web Server" />
+        </a>
+        <p style="text-align: center; font-family: 'Poppins', sans-serif;">
+        <a href="http://onskedrom.weebly.com/" target="_blank">
+            My Schmetterling's blog</a>
+        </p>
+    </div>
+</body>
+</html>

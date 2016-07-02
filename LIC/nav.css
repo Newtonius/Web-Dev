@@ -1,0 +1,140 @@
+
+#top_bar {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 155;
+    box-shadow: 2px 0px 10px #000;
+    background: #000;
+}
+    .titleLogo {
+        width: 100%;
+        position: fixed;
+        font-family: 'Playfair Display', serif;
+        font-size: 21pt;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 20px;
+        padding: 3px;
+        transition: transform 0.5s;
+    }
+    .titleLogo:hover {
+        transform:scale(1.15);
+    }
+    .titleLogo img {
+        margin-bottom: 10px;
+    }
+    a:hover > .titleLogo {
+        text-decoration: none;
+        color: #fff;
+    }
+
+#nav {
+    height: auto;
+    width: 135px;
+    margin: auto;
+}
+#nav ul li {
+    list-style-type: none;
+    width: 135px;
+    text-align: center;
+    display: block;
+    height: auto;
+    transition: all 0.5s;
+    border-radius: 15px;
+    background:rgba(0,0,0,1);
+    margin-top: 5px;
+}
+#nav ul li:hover {
+    box-shadow: 0px 0px 15px #fff;
+    transform:scale(1.15);
+}
+#nav ul li a, visited {
+    text-decoration: none;
+    display: block;
+    font-family: 'IM Fell French Canon', serif;
+    font-weight: 400;
+    font-size: 14pt;
+    color: #fff;
+    height: 100%;
+    padding: 7px;
+}
+
+@media screen and (max-width: 750px) {
+    .titleLogo {
+        margin-left: 10px; 
+    }
+}
+
+@media screen and (max-height: 640px) {
+    
+}
+
+/*
+#nav {
+    height: auto;
+    width: auto;
+    z-index: 55;
+    text-align: right;
+    padding-right: 10px;
+    z-index: 15;
+    float: right;
+}
+#nav:hover {
+}
+#nav ul li {
+    list-style-type: none;
+    width: auto;
+    border-top: 2px solid rgba(255,255,255,0.0);
+    text-align: center;
+    display: inline-block;
+    transition: .5s border-top;
+    height: 50px;
+}
+#nav ul li:hover {
+    border-top: 2px solid rgb(0,0,0);
+}
+#nav ul li a, visited {
+    text-decoration: none;
+    display: block;
+    font-family: 'Stoke', serif;
+    font-weight: 400;
+    font-size: 16pt;
+    color: #fff;
+    height: 100%;
+    padding: 7px;
+}
+
+@media screen and (max-width: 775px) {
+    #nav {
+        position: fixed;
+        margin-top: 25px;
+        margin-left: -135px;
+        transition: .5s all ease;
+        opacity: 0.65;
+        padding-right: 0px;
+    }
+    #nav:hover {
+        transform:scale(1.0)translateX(120px);
+        opacity: 1.0;
+    }
+    #nav ul li {
+        width: 150px;
+        background:rgb(40,40,40);
+        border-top: 0px;
+        border-right: 2px solid rgb(40,40,40);
+        display: block;
+        text-align: center;
+        transition: .5s all ease;
+        box-shadow: 1px 1px 8px black;
+    }
+    #nav ul li:hover {
+        border-right: 2px solid #3399FF;
+        border-top: 0px;
+    }
+    #nav ul li a, visited {
+        padding: 10px;
+        color: #ffffff;
+    }
+}
+*/

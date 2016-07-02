@@ -1,0 +1,36 @@
+#psGallery, #heidiGallery  {
+    width: 572px; height: 389px;
+    margin: 0 auto;
+    border: 1px solid green;
+    position: relative;
+}
+
+.imgTextOverlay {
+    font-size: 15pt;
+    font-family: 'Montserrat', sans-serif;
+    background:rgba(0,0,0,0.6);
+    height: 40px;
+    padding: 20px;
+    z-index: 155;
+    -webkit-transition: font-size 0.55s ease;
+    -moz-transition: font-size 0.55s ease;
+    transition: font-size 0.55s ease;
+}
+
+.imgTextOverlay:hover {
+    font-size: 16pt;
+}
+
+    @media screen and (max-width: 575px) {
+        #psGallery, #heidiGallery {
+            width: 80%; height: 300px;
+        }
+		.imgTextOverlay {
+			font-size: 12pt;
+			height: 25px;
+			padding: 15px;
+		}
+		.imgTextOverlay:hover {
+			font-size: 13pt;
+		}
+    }

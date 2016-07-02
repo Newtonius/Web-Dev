@@ -1,0 +1,155 @@
+<?php
+
+$ip=$_SERVER['REMOTE_ADDR'];
+// echo "IP address= $ip"; 
+$time = time();
+
+$log = $ip. " , ".$time;
+
+$file = './log.txt';
+
+file_put_contents($file, $log .PHP_EOL, FILE_APPEND);
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PorVous | Travel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta HTTP-EQUIV="Expires" CONTENT="-1">
+        <link rel="stylesheet" href="http://Porvous.com/CSS/porvousDesign.css" type="text/css">
+        <link rel="stylesheet" href="http://Porvous.com/CSS/sectionBody.css" type="text/css">
+        <link rel="stylesheet" href="http://Porvous.com/CSS/cultureNav.css" type="text/css">
+        <link rel="shortcut icon" href="http://Porvous.com/GFX/siteGFX/icon_heart1.png">
+        <link href='http://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Orbitron:500' rel='stylesheet' type='text/css'>
+<style>
+    .sectionBody tbody tr td p {
+        color: beige; font-size: 13pt;
+        font-family: 'Poppins', sans-serif;
+        margin: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div>
+            <p>
+                <a class="secret" href="http://Porvous.com/Sub/Poems/Poems.html" target="_blank">
+                    <img src="http://Porvous.com/GFX/siteGFX/icon_heart1.png" alt="PorVous" width="50" height="56"/>
+                </a>
+                <span class="URLName">PorVous</span>
+                <br>
+                <span class="dedication">
+                    - A gift to my inspiration; My schmetterling
+                </span>
+            </p>
+        </div>
+        <div>
+            <ul id="mainNavBar">
+                <a href="http://Porvous.com/Home.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/home-icon.png" align="left" width="30" height="30" alt="" />
+                        Home</li>
+                </a>
+                <a href="http://Porvous.com/Art.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Art-icon.png" align="left" width="30" height="30" alt="" />
+                        Art</li>
+                </a>
+                <a href="http://Porvous.com/Science.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Science-icon.png" align="left" width="30" height="30" alt="" />
+                        Science</li>
+                </a>
+                <a href="http://Porvous.com/History.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/History-icon.png" align="left" width="30" height="30" alt="" />
+                        History</li>
+                </a>
+                <a href="http://Porvous.com/Travel.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Travel-icon.png" align="left" width="30" height="30" alt="" />
+                        Travel</li>
+                </a>
+                <a href="http://Porvous.com/Blog.php" target="_self">
+                    <li><img src="http://Porvous.com/GFX/siteGFX/Blog-icon.png" align="left" width="30" height="30" alt="" />
+                        Blog</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+    <div id="foreground">
+        <div>
+            <table class="sectionBody">
+                <thead>
+                    <tr>
+                        <th>A plethora of culture!</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p style="text-align: center;">Welcome to Earth</p>
+                            <center>
+                                <iframe src='http://www.youtube.com/embed/uWXUWepSak4' width='626' height='367' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                                </iframe><br>
+                                <p>-Learn more about <a href="https://playingforchange.com/" target="_blank">Playing For Change</a>!-</p>
+                            </center>
+
+                            <br><br>
+
+                            <p style="color: #ffffff;">
+                                Listen to music From around the world! Can you handle all this culture?  
+                                <img src='http://26.media.tumblr.com/tumblr_ltswn6XQcz1qm038ko1_500.gif' width='40' height='40' alt='Explosm.net' title='Cyanide And Happiness'/>
+                            </p>
+                            <div id="cultureNavBody">
+                                <ul>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/britishMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/britishFlag.jpg" alt=""/><br>
+                                            Britain</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/georgianMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/georgianFlag.png" alt=""/><br>
+                                            Georgia</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/germanMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/germanFlag.png" alt=""/><br>
+                                            Germany</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/greenlandicMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/greenlandicFlag.png" alt=""/><br>
+                                            Greenland</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/icelandicMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/icelandicFlag.png" alt=""/><br>
+                                            Iceland</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/russianMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/russianFlag.png" alt=""/><br>
+                                            Russia</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/swedishMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/swedishFlag.jpg" alt=""/><br>
+                                            Sweden</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/englishMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/americanFlag.png" alt=""/><br>
+                                            USA</li></a>
+                                    <a href="http://Porvous.com/Sub/Travel/cultureMusic/scotishMusic.html" target="iframe"><li>
+                                            <img src="http://Porvous.com/GFX/travelGFX/flags/scotishFlag.jpg" alt=""/><br>
+                                            Scotland</li></a>
+                                </ul>
+                            </div>
+                            <div class="frameContainer">
+                                <iframe src="" name="iframe" id="frame"></iframe>
+                            </div>
+                            <br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <br>
+    </div>
+    <div id="footer">
+        <a href="http://www.aprelium.com/" target="_blank">
+            <img src="http://Porvous.com/GFX/siteGFX/abyss.gif" alt="Powered By Abyss Web Server" />
+        </a>
+        <p style="text-align: center; font-family: 'Poppins', sans-serif;">
+        <a href="http://onskedrom.weebly.com/" target="_blank">
+            My Schmetterling's blog</a>
+        </p>
+    </div>
+</body>
+</html>

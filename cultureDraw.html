@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+    #infoBanner {
+        width: 80%; height: auto;
+        background:rgba(102, 153, 255, 1.0);
+        margin-left: auto; margin-right: auto;
+        text-align: center;
+        /*
+        -moz-box-shadow: inset 0 0 5px #222;
+        -webkit-box-shadow: inset 0 0 5px #222;
+        box-shadow: inset 0 0 7px #222;
+        */
+    }
+    #cultureDraw {
+        width: 500px; height: auto;
+        background:rgba(0, 0, 0, 0.50);
+    }
+    #drawButton {
+        width: 115px; height: 55px;
+        margin: 10px;
+        background-color: #1975FF;
+        font-family: Arial; font-size: 16pt; font-weight: bold;
+        color: #ffffff;
+        border: 0px solid;
+        transition: background-color, box-shadow 0.25s, 0.25s;
+        -webkit-transition: background-color, box-shadow 0.25s, 0.25s;
+    }
+    #drawButton:hover {
+        background-color: #47A3FF;
+    }
+    #frame {
+        width: 80%; height: auto;
+        margin-left: auto; margin-right: auto;
+    }
+    #frame iframe {
+        width: 100%; height: 1000px;
+        border: 0px;
+        margin: 0px; padding: 0px;
+    }
+        </style>
+    </head>
+    <body>
+         <center>
+            <h3 style="color: #ffffff;">
+                There are is a myriad of cultures around the world, so click on the button below to 
+            randomly draw a culture and learn its many splendors!
+            </h3>
+            
+        <br><br>
+        <div id="cultureDraw">
+            <button type="button" onclick="drawClick()" id="drawButton">
+                Click Me!!
+            </button>
+        </div>
+        </center>
+        <br><br>
+        
+        <div id="infoBanner">
+            <p style="font-family: Myriad Pro; color: #000000; font-size: 24pt; margin: 10px; padding: 10px;">
+                Culture -  
+                <span style="color: #ffffff; font-weight: normal; font-style:  italic;" id="cultureHead">
+                    French
+                </span>
+            </p>     
+        </div>
+        <div id="frame">
+            <iframe id="cultureFrame" src="popuplogin.html"></iframe>
+        </div>
+        
+<script>
+    var culture = ["","French","English","German","Swedish",
+        "Georgian","Russian","Icelandic","Peruvian","Italian",
+        "Japanese", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    
+    function drawClick() {
+        var rand = Math.random();
+        num = Math.ceil(rand * 10);
+        
+        var label = document.getElementById("cultureHead").innerHTML = culture[num];
+        
+        if (label === "French") {
+            window.frames['cultureFrame'].document.location.href = 'popuplogin.html';
+        }
+        if (label === "English") {
+        }
+        if (label === "German") {
+            window.frames['cultureFrame'].document.location.href = 'Here.html';
+        }
+        if (label === "Swedish") {
+        }
+    }
+</script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submit Poem</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    #form {
+        margin-left: auto; margin-right: auto;
+        background-color: bisque;
+        width: auto;
+        height: 100%;
+    }
+    .fontStyle {
+        color: Black;
+        font-size: 12pt; font-family: Times;
+        margin-left: 20px;
+    }
+    .textField {
+        width: 250px;
+    }
+    
+    #textarea {
+        margin-left: auto; margin-right: auto;
+        width: 90%;
+        margin-left: 10px;
+        height: 250px;
+    }
+    #textarea:focus, .textField:focus {
+        border: 2px solid #3399FF;
+    }
+    .fileInput {
+        margin-left: 10px;
+    }
+    .submit {
+        margin: 5px;
+        padding: 5px;
+    }
+    </style>
+</head>
+<body>
+    
+<div id="form">
+<form action="Submit.PHP" method="get">
+    
+<label class="fontStyle">Name</label>
+<input type="text" name="name" class="textField">
+<label class="fontStyle">Title of Work</label>
+<input type="text" name="title" class="textField">
+<label class="fontStyle">Your MASTER-PIECE</label>
+<textarea name="work" id="textarea">
+</textarea>
+<br>
+<label style="color: Black; font-size: 8pt;">
+    *Optional: Submit your work in a .doc/.rtf form</label>
+<input type="file" name="document" class="fileInput">
+<br><br>
+<input class="submit" type="submit" value="Submit Work">
+
+</form>
+</div>
+
+</body>
+</html>

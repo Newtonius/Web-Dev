@@ -1,0 +1,68 @@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #wrapper {
+        margin: auto;
+        height: 75%;
+        width: 50%;
+    }
+    #box1 {
+        background: URL("images/generalGFX/img3.jpg") center no-repeat;
+        background-size: cover;
+    }
+    #box2 {
+        background: URL("images/generalGFX/img1.jpg") center no-repeat;
+        background-size: cover;
+    }
+    #box3 {
+        background: URL("images/generalGFX/img4.jpg") center no-repeat;
+        background-size: cover;
+    }
+    #box4 {
+        background: URL("images/generalGFX/img2.jpg") center no-repeat;
+        background-size: cover;
+    }
+    .homeContainer:nth-child(odd) {
+        width: 300px;
+        height: 300px;
+        margin: 0 10px 10px 0px;
+        float: left;
+    }
+    .homeContainer:nth-child(even) {
+        width: 300px;
+        height: 300px;
+        margin: 0 10px 10px 0px;
+        float: left;
+    }
+    .homeContent {
+        height: 100%;
+        width: 100%;
+        background:rgba(0,0,0,0.10);
+        color: #ffffff;
+        font-size: 16pt;
+        font-weight: 700;
+        text-align: center;
+        transition: background 0.5s;
+    }
+    .homeContent:hover {
+        background:rgba(0,0,0,0.5);
+    }
+</style>
+
+<div id="wrapper">
+    <div id="box1" class="homeContainer"><a href="/forum/kids-center" target="_parent">
+            <p class="homeContent">Kids</p>
+        </a></div>
+    <div id="box2" class="homeContainer"><a href="/forum/parent" target="_parent">
+            <p class="homeContent">Parents</p>
+        </a></div>
+    <div id="box3" class="homeContainer"><a href="/forum/educator-section" target="_parent">
+            <p class="homeContent">Educators</p>
+        </a></div>
+    <div id="box4" class="homeContainer"><a href="/forum/good-samaritan" target="_parent">
+            <p class="homeContent">People who care</p>
+        </a></div>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nav test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Expires" CONTENT="-1">
+
+    <!-- <link rel="stylesheet" href="cultureNav.css" type="text/css"> -->
+<style>
+    #myTV {
+    background-image:url(screen.jpg);
+    width:269px;
+    height:164px;
+    padding-top:20px;
+    }
+
+    #myScreen {
+        background: url("flags/britishFlag.jpg") center no-repeat;
+        background-size: cover;
+        width:228px;
+        height:128px;
+        margin-left:21px;
+    }
+</style>
+</head>
+<body>
+
+
+<div id="myTV">
+    <div id="myScreen">        
+    </div>
+</div>
+
+<script type="text/javascript">
+var myScreen = document.getElementById('myScreen');
+var myPics = ['britishFlag','czechFlag','georgianFlag'];
+var totalPics = myPics.length;
+var i = 0;
+function loop() {
+    if(i > (totalPics - 1)) {
+        i = 0;
+    }
+    myScreen.style.background = 'url("flags/'+ myPics[i]+ '.png") center no-repeat';
+    myScreen.style.backgroundSize = 'cover';
+    i++;
+    loopTimerAndDelay = setTimeout('loop()',1000);
+}
+loop();
+</script>
+</body>
+</html>

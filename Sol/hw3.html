@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sol</title>
+    
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    
+    <div class="scaled">
+        <div class="path1">
+            <div class="path1visible"></div>            
+        </div>
+        <div class="path2">           
+            <div class="path2visible"></div>
+        </div>
+        <div class="path3">       
+            <div class="path3visible"></div>
+        </div>
+        <div class="path4">            
+            <div class="path4visible"></div>
+        </div>
+        <div class="path5">           
+            <div class="path5visible"></div>
+        </div>
+        <img src="images/S1.png" alt="" id="sun"/>   
+        <img src="images/P1.png" alt="" id="planet1"/>       
+        <img src="images/P2.png" alt="" id="planet2"/>
+        <img src="images/P3.png" alt="" id="planet3"/>       
+        <img src="images/P4.png" alt="" id="planet4"/> 
+        <img src="images/P5.png" alt="" id="planet5"/>
+        <p id="S1">Sol</p>
+        <p id="P1">Fibula</p>
+        <p id="P2">Cerces</p>
+        <p id="P3">Umas</p>
+        <p id="P4">Tripos</p>
+        <p id="P5">Aris</p>
+        <div class="bar">
+            <button id="s1">Sol</button>
+            <button id="p1">Fibula</button>
+            <button id="p2">Creces</button>
+            <button id="p3">Umas</button>
+            <button id="p4">Tripos</button>
+            <button id="p5">Aris</button>
+        </div>
+        <div class="info">
+            <div class="infov"></div>
+            <div class="image">
+                <img src="" alt="" id="imagesrc"/>    
+            </div>
+            <div class="container">
+                <hr>
+                <p id="mass"></p>
+                <p id="diameter"></p>
+                <p id="gravity"></p>
+                <p id="avgtemp"></p>
+                <p id="daylength"></p>       
+            </div>    
+        </div>     
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script>
+        
+        $('.info').click(function(){
+            $('.info').css('visibility', 'hidden'); 
+        });
+        $('#s1').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/S1.png');
+            $('#imagesrc').css('box-shadow', '0 0 10px 5px #fcb000');
+            $('#imagesrc').css('animation', 'sunburst 3s infinite alternate');
+            $('#mass').html('Mass: 2,367,000 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 1,391,400 km');
+            $('#gravity').html('Gravity: 274.0 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: ~5500<sup>o</sup> C');
+            $('#daylength').html('Day Length: 609 hours'); 
+        });
+        $('#p1').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P1.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 5.98 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 12,757 km');
+            $('#gravity').html('Gravity: 9.52 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: 167<sup>o</sup> C');
+            $('#daylength').html('Day Length: 23.938 hours'); 
+        });
+        $('#p2').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P2.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 9.79 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 51,118 km');
+            $('#gravity').html('Gravity: 8.7 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: 14<sup>o</sup> C');
+            $('#daylength').html('Day Length: 17.2 hours'); 
+        });
+        $('#p3').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P3.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 568 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 120,536 km');
+            $('#gravity').html('Gravity: 9.0 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: -140<sup>o</sup> C');
+            $('#daylength').html('Day Length: 10.7 hours'); 
+        });
+        $('#p4').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P4.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 1,898 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 142,984 km');
+            $('#gravity').html('Gravity: 23.1 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: -200<sup>o</sup> C');
+            $('#daylength').html('Day Length: 16.1 hours'); 
+        });
+        $('#p5').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P5.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 0.0146 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 2,370 km');
+            $('#gravity').html('Gravity: 0.7 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: -225<sup>o</sup> C');
+            $('#daylength').html('Day Length: 153.3 hours'); 
+        });
+        $('#sun').mouseover(function() {
+            $('#S1').css('visibility', 'visible');
+        });
+        $('#sun').mouseleave(function() {
+            setTimeout(function() {
+               $('#S1').css('visibility', 'hidden'); 
+            }, 200);
+        });
+        $('#planet1').mouseover(function() {
+            $('#P1').css('visibility', 'visible');
+        });
+        $('#planet1').mouseleave(function() {
+            setTimeout(function() {
+               $('#P1').css('visibility', 'hidden'); 
+            }, 1000);
+        });
+        $('#planet2').mouseover(function() {
+            $('#P2').css('visibility', 'visible');
+        });
+        $('#planet2').mouseleave(function() {
+            setTimeout(function() {
+               $('#P2').css('visibility', 'hidden'); 
+            }, 1000);
+        });
+        $('#planet3').mouseover(function() {
+            $('#P3').css('visibility', 'visible');
+        });
+        $('#planet3').mouseleave(function() {
+            setTimeout(function() {
+               $('#P3').css('visibility', 'hidden'); 
+            }, 1000);
+        });
+        $('#planet4').mouseover(function() {
+            $('#P4').css('visibility', 'visible');
+        });
+        $('#planet4').mouseleave(function() {
+            setTimeout(function() {
+               $('#P4').css('visibility', 'hidden'); 
+            }, 1000);
+        });
+        $('#planet5').mouseover(function() {
+            $('#P5').css('visibility', 'visible');
+        });
+        $('#planet5').mouseleave(function() {
+            setTimeout(function() {
+               $('#P5').css('visibility', 'hidden'); 
+            }, 1000);
+        });
+        $('#sun').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/S1.png');
+            $('#imagesrc').css('box-shadow', '0 0 10px 5px #fcb000');
+            $('#imagesrc').css('animation', 'sunburst 3s infinite alternate');
+            $('#mass').html('Mass: 2,367,000 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 1,391,400 km');
+            $('#gravity').html('Gravity: 274.0 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: ~5500<sup>o</sup> C');
+            $('#daylength').html('Day Length: 609 hours'); 
+        });
+        $('#planet1').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P1.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 5.98 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 12,757 km');
+            $('#gravity').html('Gravity: 9.52 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: 167<sup>o</sup> C');
+            $('#daylength').html('Day Length: 23.938 hours'); 
+        });
+        $('#planet2').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P2.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 9.79 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 51,118 km');
+            $('#gravity').html('Gravity: 8.7 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: 14<sup>o</sup> C');
+            $('#daylength').html('Day Length: 17.2 hours'); 
+        });
+        $('#planet3').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P3.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 568 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 120,536 km');
+            $('#gravity').html('Gravity: 9.0 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: -140<sup>o</sup> C');
+            $('#daylength').html('Day Length: 10.7 hours'); 
+        });
+        $('#planet4').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P4.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 1,898 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 142,984 km');
+            $('#gravity').html('Gravity: 23.1 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: -200<sup>o</sup> C');
+            $('#daylength').html('Day Length: 16.1 hours'); 
+        });
+        $('#planet5').click(function(){
+            $('.info').css('visibility', 'visible');
+            $('#imagesrc').attr('src', 'images/P5.png');
+            $('#imagesrc').css('box-shadow', 'none');
+            $('#imagesrc').css('animation', '0');
+            $('#mass').html('Mass: 0.0146 x 10<sup>24</sup> kg');
+            $('#diameter').html('Diameter: 2,370 km');
+            $('#gravity').html('Gravity: 0.7 m/s<sup>2</sup>');
+            $('#avgtemp').html('Temperature: -225<sup>o</sup> C');
+            $('#daylength').html('Day Length: 153.3 hours'); 
+        });
+    </script>
+    
+</body>
+</html>

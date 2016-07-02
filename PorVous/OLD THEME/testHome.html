@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PorVous</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta HTTP-EQUIV="Expires" CONTENT="-1">
+        <link rel="shortcut icon" href="GFX/icon_heart1.png">
+        <link href='http://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+<style>
+* {
+    margin: 0px; padding: 0px;
+}
+body {
+    /*
+    background: url(GFX/Daff-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    */
+    width: 100%;
+    overflow: hidden;
+}
+ul {
+    width: 100%; height: auto;
+    z-index: -5;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul a li {
+    padding: 15px;
+}
+ul a,visited li {
+    z-index: 0;
+    text-indent: 50px;
+    color: #ffffff;
+    font-size: 16pt;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+}
+ul a:hover, visited li{
+    margin-left: 10px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px #ffffff;
+    background:rgba(7,17,27,0.55);
+}
+header {
+    width: 250px; height: 100%;
+    position: fixed;
+    background:rgb(11, 25, 38);
+}
+span.URLName {
+    font-family: Cambria;
+    font-size: 25pt;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #ffffff;
+    color: orange;
+    text-align: center;
+    -moz-animation: color 25s infinite, text-shadow infinite;
+    -webkit-animation: color 25s infinite, text-shadow infinite;
+    animation: color 25s infinite, text-shadow infinite;
+}
+@-moz-keyframes color {
+    0% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+    8% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+    17% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+    26% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+    34% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+    43% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+    51% {color: #C500FF; text-shadow: 2px 2px 5px #C500FF;}
+    59% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+    68% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+    76% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+    84% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+    92% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+    100% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+}
+@-webkit-keyframes color {
+    0% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+    8% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+    17% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+    26% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+    34% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+    43% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+    51% {color: #C500FF; text-shadow: 2px 2px 5px #C500FF;}
+    59% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+    68% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+    76% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+    84% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+    92% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+    100% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+}
+@keyframes color {
+    0% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+    8% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+    17% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+    26% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+    34% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+    43% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+    51% {color: #C500FF; text-shadow: 2px 2px 5px #C500FF;}
+    59% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+    68% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+    76% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+    84% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+    92% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+    100% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+}
+span.dedication {
+    font-family: arial;
+    color: #fff;
+    text-shadow: 2px 2px 5px #ffffff;
+    font-style: oblique;
+    font-size: 12pt;
+    margin-right: 5px;
+}
+a.secret {
+    text-decoration: none;
+    float: left;
+    margin-right: 25px;
+}
+#content {
+    left: 250px;
+    width: 100%;
+    height: 100%;
+    background:rgb(11,23,11);
+}
+#frame {
+    border: 0px;
+    width: 100%;
+    left: 250px;
+    position: absolute;
+    z-index: 15;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div>
+            <p>
+                <a class="secret" href="Poems/Poems.html" target="_blank">
+                    <img src="GFX/icon_heart1.png" alt="PorVous" width="50" height="56"/>
+                </a>
+                <span class="URLName">PorVous</span>
+                <br>
+                <span class="dedication">
+                    - A gift to my inspiration; My schmetterling
+                </span>
+            </p>
+        </div>
+        <div>
+            <ul>
+                <a href="home.html" target="iFrame">
+                    <li><img src="GFX/homeGFX/home-icon.png" align="left" width="30" height="30" alt="" />
+                        Home</li>
+                </a>
+                <a href="Art.html" target="iFrame">
+                    <li><img src="GFX/homeGFX/Art-icon.png" align="left" width="30" height="30" alt="" />
+                        Art</li>
+                </a>
+                <a href="science.html" target="iFrame">
+                    <li><img src="GFX/homeGFX/science-icon.png" align="left" width="30" height="30" alt="" />
+                        Science</li>
+                </a>
+                <a href="history.html" target="iFrame">
+                    <li><img src="GFX/homeGFX/history-icon.png" align="left" width="30" height="30" alt="" />
+                        History</li>
+                </a>
+                <a href="travel.html" target="iFrame">
+                    <li><img src="GFX/homeGFX/travel-icon.png" align="left" width="30" height="30" alt="" />
+                        Travel</li>
+                </a>
+                <a href="Blog.html" target="iFrame">
+                    <li><img src="GFX/homeGFX/blog-icon.png" align="left" width="30" height="30" alt="" />
+                        Blog</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <iframe src="home.html" id="frame" name="iFrame" onload="setHeight()"></iframe>
+    </div>
+<script>
+function setHeight() {
+    var frame = document.getElementById("frame");
+    frame.style.height = window.screen.availHeight - 50 + 'px';
+    frame.style.width = window.screen.availWidth - 250 + 'px';
+}
+</script>
+</body>
+</html>

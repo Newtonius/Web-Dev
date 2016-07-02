@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+    padding:  0;
+    margin: 0;
+}
+
+body {
+    padding:  0;
+    margin: 0;
+    overflow-y: scroll;
+    font-family: Aharoni;
+    font-size: 18px;
+}
+
+#nav {
+    background-color: #222;
+}
+
+#nav_wrapper {
+    text-align: center;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#nav ul li{
+    display: inline-block;
+}
+
+#nav ul li:hover{
+    background-color: #333;
+}
+
+#nav ul li a,visited{ /* The ",visited" next to the 'a' 
+                    means that it's for a before and after it is clicked*/
+    color: #ccc;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#nav ul li a:hover{
+    color: aquamarine;
+    text-decoration: none;
+}
+
+#nav ul li:hover ul {
+    display: block;
+}
+
+#nav ul ul {
+    display: none;
+    position: absolute;
+}
+
+#nav ul ul li {
+    display: block;
+    background-color: brown;
+    padding:  0;
+    margin: 0;
+}
+
+#nav ul ul li:hover {
+    background-color: #333
+}
+
+#nav ul ul li a,visited {
+    color: #ccc;
+}

@@ -1,0 +1,106 @@
+#title {
+    padding-top: 10%;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    color: #ffdc99;
+}
+.headTitle {
+    padding: 10px;
+    margin-left: auto; margin-right: auto;
+    width: 300px;
+    height: auto;
+    box-shadow: 0px 0px 10px #fff;
+    background:rgba(0,0,0,0.35);
+    position: relative;
+}
+.headTitle p {
+    text-align: center;
+    padding: 8px; margin: 8px;
+    color: #ffffff;
+    font-size: 18pt;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bold;
+}
+.headTitle hr {
+    height: 1px;
+    border: 2px solid #B2FF99;
+}
+.URLName {
+        text-shadow: 2px 2px 5px #ffffff;
+        color: orange;
+        -webkit-animation: color 25s infinite;
+        animation: color 25s infinite;
+    }
+    @-webkit-keyframes color {
+        0% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+        8% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+        17% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+        26% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+        34% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+        43% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+        51% {color: #C500FF; text-shadow: 2px 2px 5px #C500FF;}
+        59% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+        68% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+        76% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+        84% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+        92% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+        100% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+    }
+    @keyframes color {
+        0% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+        8% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+        17% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+        26% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+        34% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+        43% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+        51% {color: #C500FF; text-shadow: 2px 2px 5px #C500FF;}
+        59% {color: #0024FF; text-shadow: 2px 2px 5px #0024FF;}
+        68% {color: #01FFE5; text-shadow: 2px 2px 5px #01FFE5;}
+        76% {color: #3CF10E; text-shadow: 2px 2px 5px #3CF10E;}
+        84% {color: #F5FF00; text-shadow: 2px 2px 5px #F5FF00;}
+        92% {color: #FF9C00; text-shadow: 2px 2px 5px #FF9C00;}
+        100% {color: #FE0000; text-shadow: 2px 2px 5px #FE0000;}
+    }
+.secret img {
+    width: 50px; height: 56px;
+    -webkit-animation: start 3s infinite ease-in-out;
+    animation: start 3s infinite ease-in-out;
+}
+    @-webkit-keyframes start {
+        0%{-webkit-transform:scale(1.0)rotate(0deg);}
+        25%{-webkit-transform:scale(1.35)rotate(-15deg);}
+        50%{-webkit-transform:scale(1.0)rotate(15deg);}
+        75%{-webkit-transform:scale(1.25)rotate(-15deg);}
+        100%{-webkit-transform:scale(1.0)rotate(0deg);} 
+    }
+    @keyframes start {
+        0%{transform:scale(1.0)rotate(0deg);}
+        25%{transform:scale(1.35)rotate(-15deg);}
+        50%{transform:scale(1.0)rotate(15deg);}
+        75%{transform:scale(1.25)rotate(-15deg);}
+        100%{transform:scale(1.0)rotate(0deg);}
+    }
+.footnote {
+    font-family: 'Gloria Hallelujah', cursive;
+    width: 300px;
+    margin-left: auto; margin-right: auto;
+    font-size: 12pt;
+    color: #FFC266;
+}
+#messageToBabe {
+    width: 100%;
+    height: auto;
+    background:rgb(33,178,166);
+    position: relative;
+    z-index: 25;
+}
+    @media screen and(max-width: 500px) {
+        #homeHeader {
+            width: 500px;
+        }
+        .headTitle {
+            width: 150px;
+        }
+    }
