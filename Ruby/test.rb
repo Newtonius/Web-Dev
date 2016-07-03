@@ -95,9 +95,6 @@ puts("Hello, world!")
 puts "Hello, world!"
 # All these work because everything is an OBJECT!
 
-# Using methods on string classes
-puts "Testing the length of a string".length
-puts "Turning everything uppercase".upcase
 =begin
 Different methods to use on string classes
 
@@ -139,3 +136,32 @@ between any symbols!$
 
 puts "x" > "y" # returns false
 puts "x" < "y" # returns true
+
+# Loops do ___ end or {} can be delimeters
+5.times do print "Loop test 1 " end
+5.times {print "Loop test 2 "}
+1.upto(5) { print "Loop test 3 "}
+10.downto(5) {print "Loop test 4 "}
+0.step(50,5) {print "Loop test 5 "}
+# Incrementing a variable through a loop
+1.upto(5) { |number| print "Number ", number, " "}
+
+# The ? is supposed to show the position of either 'x' or 'g' in the ACII table.
+puts ?x, " ", ?g
+puts 120.chr # Inversion of ?, tells what char is at 120
+
+# INTERPOLATION
+f = 10
+g = 20
+puts "#{f} + #{g} = #{f + g}" # outputs 10 + 20 = 30
+animal = "cat"
+puts "The #{animal} in the hat."
+puts "It's a #{"bad " * 5} world"
+puts f.to_s, g.to_s # Converts integers to string
+
+# Using methods on string classes
+puts "Testing the length of a string".length
+puts "Turning everything uppercase".upcase
+
+# SUBSTITUTION
+puts "foobar".sub('bar','foo') # Changes 'bar' with 'foo' prints 'foofoo'
