@@ -97,7 +97,6 @@ puts "Hello, world!"
 
 =begin
 Different methods to use on string classes
-
 "Test" + "Test" = TestTest
 "Test".capitalize = Test
 "Test".downcase = test
@@ -165,3 +164,135 @@ puts "Turning everything uppercase".upcase
 
 # SUBSTITUTION
 puts "foobar".sub('bar','foo') # Changes 'bar' with 'foo' prints 'foofoo'
+# Multiple susbstitution
+puts "Changing all I's in this with p".gsub('i','p') # Change 'i' with 'p'
+# Replace to a certain ammount of characters
+note = "Replacing a specific amount of characters"
+puts note.sub(/^..../, 'Hello') # Replaces to 4 characters from front
+puts note.sub(/....$/, 'Hello') # Replaces 4 from back
+
+# ITTERATING through a string
+stringTest = "|Individually or in groups|"
+stringTest.scan(/./) {|letter| print letter, " "} # Prints each letter individually
+puts " "
+stringTest.scan(/../) {|letter| print letter, " "} # Prints two letters together including WHITESPACE
+puts " "
+stringTest.scan(/\w\w/) {|letter| print letter, " "} # Prints in couples, IGNORES WHITESPACE
+puts " "
+=begin
+^ Anchor for the beginning of a line
+$ Anchor for the end of a line
+\A Anchor for the start of a string
+\Z Anchor for the end of a string
+. Any character
+\w Any letter, digit, or underscore
+\W Anything that \w doesn’t match
+\d Any digit
+\D Anything that \d doesn’t match (non-digits)
+\s Whitespace (spaces, tabs, newlines, and so on)
+\S Non-whitespace (any visible character)
+* -> Match zero or more occurrences of the preceding character, and match as many
+as possible.
++ -> Match one or more occurrences of the preceding character, and match as many
+as possible.
+*? -> Match zero or more occurrences of the preceding character, and match as few
+as possible.
++? -> Match one or more occurrences of the preceding character, and match as few
+as possible.
+? -> Match either one or none of the preceding character.
+{x} -> Match x occurrences of the preceding character.
+{x,y} -> Match at least x occurrences and at most y occurrences.
+=end
+# Ex; Extract all number values only (the '+' grabs all digits of a number)
+"The car costs $1000 and the cat costs $10".scan(/\d+/) {|number| print number, " "}
+puts " "
+# And you can specifically scan for same occurrences or through a range
+"Look for any vowels in string".scan(/[aeiou]/){ |letter| print letter, " "}
+puts " "
+"Look for any vowels in string".scan(/[l-z]/){ |letter| print letter, " "}
+puts " "
+
+# MATCHING operator
+puts "Print if condition has vowels" if "this is a test"  =~ /[aeiou]/
+puts "Print if condition has numbers" if "this is a test"  =~ /[0-9]/
+# Can also use the '.match()' method
+puts "Print if condition has vowels" if "this is a test".match(/[aeiou]/)
+
+
+# ARRAYS
+first_array = [1, 2, 3, 4]
+puts first_array[2]
+puts first_array[2] + 1
+second_array = ["One", "two", "three", "four"]
+second_array[2] = "fish " * 3
+puts second_array[2]
+# blank arrays can be filled like java arraylists
+blank_array = []
+blank_array << "Word" # or the equivalent: blank_array.push("Word")
+blank_array.push("play")
+blank_array.push("fun")
+puts blank_array.pop # Pop removes the most recently inserted index and its data
+puts blank_array.pop
+puts blank_array.length # Get length of Array
+# Array methods
+second_blank_array = ["Word", "Play", "Fun"]
+puts second_blank_array.join
+puts second_blank_array.join(', ')
+# Splitting strings into ARRAYS and join them with ', '
+puts "This is a test".scan(/\w/).join(',')
+# Splits a string by a specified element.
+puts "Here we go. We're gonna split. By periods.".split(/\./).inspect
+puts "Splitting string by spaces.".split(/\s+/).inspect
+
+
+# ARRAY ITTERATION
+[1, "test", 2, 3, 4].each {|element| print element.to_s + "X "}
+puts " "
+[1, 2, 3, 4].collect {|element| print element * 2, " "} # Convert elements on the fly with 'collect'
+puts " "
+# While loop
+third_array = [1, "while", 2, "loop", 3, 4]
+i = 0
+while (i < third_array.length)
+  print third_array[i].to_s + "X "
+  i += 1
+end
+puts ""
+
+# USING 'p' instead of 'puts' !IMPORTANT!
+p "You can use 'p' instead of 'puts' for debugging purposes!"
+
+# COMBINING ARRAYS
+array_one = [1, 2, 3, 4]
+array_two = ["Adding", "two", "arrays", "together"]
+array_consolidate = array_one + array_two # ADDING ARRAY ELEMENTS
+p array_consolidate
+# Removing similar elemnts in a array
+array_three = [1, 2, 3]
+array_remove = array_one - array_three # REMOVING ARRAY ELEMENTS IF SIMILAR
+p array_remove
+
+
+# CHECKING INSIDE ARRAYS
+h = []
+puts "h array is EMPTY" if h.empty? # Check if EMPTY
+j = [1, 2, 3, 4]
+# Check for element
+print "Does j array have an 'X'? " + j.include?("X").to_s
+puts ""
+print "Does j array have a 3? " + j.include?(3).to_s
+puts ""
+# Grab first or last element in array
+print j.first, " ", j.last
+puts ""
+# Joining a certain amount of elements from beginning or end of the array
+puts j.first(2).join('-')
+# Reversing array order
+print j.reverse, " "
+puts ""
+
+
+# HASHES; like arrays but have a different storage format and a way to define each element
+dictionary = { 'cat' => 'feline animal', 'dog' => 'canine animal' }
+puts dictionary.size
+puts dictionary['cat'] # Prints definition give to 'cat'
