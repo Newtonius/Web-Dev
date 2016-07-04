@@ -1,41 +1,37 @@
 # Single line comments
-
 =begin
-puts "Hello World"
-print "test"
-puts "2 + 2 is eqaul to ", 2 + 2
-puts 10/3
-puts 10.0/3
-
-Shit, everything in Ruby is an object
-puts 2.+(2)
-    is just the same as
-puts 2 + 2
-
+  multi line
+  comments
 =end
 
-# Creating an object in Ruby : Person
+puts "Hello World"
+print "test"
+puts "2 + 2 is eqaul to ", 2 + 2 # joining different types
+puts "Hello" + " world!" # Joining strings
+puts 10/3
+puts 10.0/3
+puts 2.+(2)
+puts 2 + 2
+x = 10
+puts x * 2
 
+# CLASS OBJECTS
 class Person
   attr_accessor :name, :age, :gender
 end
-
-person_instance = Person.new
-
+person_instance = Person.new # Declaring class object to variable object
 person_instance.name = "Robert"
 person_instance.age = 21
 person_instance.gender = "Male"
-
 puts person_instance.name
 puts person_instance.age
 puts person_instance.gender
 
-x = 10
-puts x * 2
 
+# INHERITANCE
 =begin
-THIS IS CAN BE PLACED IN AN INHERITANCE STURCTURE UNDER
-A PET CLASS
+THIS IS CAN BE PLACED IN AN INHERITANCE STRUCTURE UNDER
+A PARENT CLASS (Pet)
 
 class Cat
   attr_accessor :name, :age, :gender, :color
@@ -47,27 +43,19 @@ class Snake
   attr_accessor :name, :age, :gender, :color
 end
 =end
-
-# INHERITANCE
-
-# Parent
-class Pet
-  # Undefined Methods
-  attr_accessor :name, :age, :gender, :color
+class Pet # Parent
+  attr_accessor :name, :age, :gender, :color # Undefined Method(s)
 end
-# Subclasses
-class Cat < Pet
+class Cat < Pet # Subclass
 end
-class Dog < Pet
-  # Defined Methods
-  def bark
+class Dog < Pet # Subclass
+  def bark # Defined Method
     puts "Woof!"
   end
 end
-class Snake < Pet
-  attr_accessor :length
+class Snake < Pet # Subclass
+  attr_accessor :length # Unique method only in subclass
 end
-
 snake = Snake.new
 snake.name = "Sammy the snake"
 snake.length = 200
@@ -80,7 +68,6 @@ lassie.bark
 
 rex = Dog.new
 rex.bark
-
 # Shows what class the variable 'rex' belongs too
 puts rex.class
 # Same for any instance
@@ -94,7 +81,6 @@ Kernel.puts "Hello, world!"
 puts("Hello, world!")
 puts "Hello, world!"
 # All these work because everything is an OBJECT!
-
 =begin
 Different methods to use on string classes
 "Test" + "Test" = TestTest
@@ -110,20 +96,27 @@ Different methods to use on string classes
 "Test".upcase.reverse.next = TSEU
 =end
 
+# IF UNLESS STATEMENTS
 age = 25
 w = "test"
 z = "string"
 puts "Success!" if w + z == "teststring"
 puts "You are 24!" if age == 24
-5.times{puts "Test"}
-print "abc" * 5
+if age < 18
+  puts "You are too young to use this program"
+end
+unless age >= 18 # Unless your age is greater than or equal to 18; do code
+  puts "You are too young to use this system"
+end
+
 
 # Convertions
 a = 10
 b = 3
 c = 5.75
 puts a.to_f / b.to_f # To float
-puts c.to_i # To integer
+puts c.to_i # To integer/.
+
 
 # Multi line string, YOU CAN USE ANY DELIMETER!
 d = %q{This is a test
@@ -133,21 +126,33 @@ line capabilities}
 e = %q$Multi line works
 between any symbols!$
 
+
+# Boolean string object
 puts "x" > "y" # returns false
 puts "x" < "y" # returns true
 
+
 # Loops do ___ end or {} can be delimeters
+puts " abc " * 2
 5.times do print "Loop test 1 " end
+  puts ""
 5.times {print "Loop test 2 "}
+  puts ""
 1.upto(5) { print "Loop test 3 "}
+  puts ""
 10.downto(5) {print "Loop test 4 "}
+  puts ""
 0.step(50,5) {print "Loop test 5 "}
+  puts ""
 # Incrementing a variable through a loop
 1.upto(5) { |number| print "Number ", number, " "}
+  puts ""
+
 
 # The ? is supposed to show the position of either 'x' or 'g' in the ACII table.
 puts ?x, " ", ?g
 puts 120.chr # Inversion of ?, tells what char is at 120
+
 
 # INTERPOLATION
 f = 10
@@ -158,9 +163,11 @@ puts "The #{animal} in the hat."
 puts "It's a #{"bad " * 5} world"
 puts f.to_s, g.to_s # Converts integers to string
 
+
 # Using methods on string classes
 puts "Testing the length of a string".length
 puts "Turning everything uppercase".upcase
+
 
 # SUBSTITUTION
 puts "foobar".sub('bar','foo') # Changes 'bar' with 'foo' prints 'foofoo'
@@ -171,14 +178,15 @@ note = "Replacing a specific amount of characters"
 puts note.sub(/^..../, 'Hello') # Replaces to 4 characters from front
 puts note.sub(/....$/, 'Hello') # Replaces 4 from back
 
+
 # ITTERATING through a string
 stringTest = "|Individually or in groups|"
 stringTest.scan(/./) {|letter| print letter, " "} # Prints each letter individually
-puts " "
+  puts " "
 stringTest.scan(/../) {|letter| print letter, " "} # Prints two letters together including WHITESPACE
-puts " "
+  puts " "
 stringTest.scan(/\w\w/) {|letter| print letter, " "} # Prints in couples, IGNORES WHITESPACE
-puts " "
+  puts " "
 =begin
 ^ Anchor for the beginning of a line
 $ Anchor for the end of a line
@@ -205,12 +213,13 @@ as possible.
 =end
 # Ex; Extract all number values only (the '+' grabs all digits of a number)
 "The car costs $1000 and the cat costs $10".scan(/\d+/) {|number| print number, " "}
-puts " "
+  puts " "
 # And you can specifically scan for same occurrences or through a range
 "Look for any vowels in string".scan(/[aeiou]/){ |letter| print letter, " "}
-puts " "
+  puts " "
 "Look for any vowels in string".scan(/[l-z]/){ |letter| print letter, " "}
-puts " "
+  puts " "
+
 
 # MATCHING operator
 puts "Print if condition has vowels" if "this is a test"  =~ /[aeiou]/
@@ -247,9 +256,9 @@ puts "Splitting string by spaces.".split(/\s+/).inspect
 
 # ARRAY ITTERATION
 [1, "test", 2, 3, 4].each {|element| print element.to_s + "X "}
-puts " "
+  puts " "
 [1, 2, 3, 4].collect {|element| print element * 2, " "} # Convert elements on the fly with 'collect'
-puts " "
+  puts " "
 # While loop
 third_array = [1, "while", 2, "loop", 3, 4]
 i = 0
@@ -257,7 +266,7 @@ while (i < third_array.length)
   print third_array[i].to_s + "X "
   i += 1
 end
-puts ""
+  puts ""
 
 # USING 'p' instead of 'puts' !IMPORTANT!
 p "You can use 'p' instead of 'puts' for debugging purposes!"
@@ -296,3 +305,41 @@ puts ""
 dictionary = { 'cat' => 'feline animal', 'dog' => 'canine animal' }
 puts dictionary.size
 puts dictionary['cat'] # Prints definition give to 'cat'
+# Can define similar to an array
+dictionary['cat'] = 'fluffy animal'
+puts dictionary['cat']
+# Itterating through Hash elements
+number_elements = { "a" => 1, "b" => 2}
+number_elements.each { |key, value| puts "#{key} equals #{value}" }
+# Retrieving only KEYS
+p number_elements.keys
+# DELETING hash elements
+number_elements.delete('a')
+p number_elements
+# Deleting CONDITIONALLY
+num_ele = {"a" => 100, "b" => 20}
+num_ele.delete_if { |key, value| value < 25 }
+p num_ele
+
+# HASHES WITHIN HASHES; since everything is an object, it is okay
+people = {
+  'jake' => {
+    'name' => 'Jake Ghaul',
+    'age' => 22,
+    'gender' => 'male',
+    'favorite games' => ['Star wars', 'Smash', 'Call of Duty']
+  },
+  'newt' => {
+    'name' => 'Newtonius Von Crankehosen',
+    'age' => 21,
+    'gender' => 'male'
+  }
+}
+puts people['jake']['age']
+puts people['newt']['age']
+p people['jake']
+puts "length of array in has is " + people['jake']['favorite games'].length.to_s
+puts people['jake']['favorite games'].join(", ")
+
+
+# FLOW CONTROL;
