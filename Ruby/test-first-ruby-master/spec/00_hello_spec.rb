@@ -100,7 +100,7 @@
 #       "Hello, #{who}!"
 #     end
 
-require "C:/Users/aarb9/Desktop/test-first-ruby-master/lib/00_hello"
+require "00_hello"
 
 describe "the hello function" do
   it "says hello" do
