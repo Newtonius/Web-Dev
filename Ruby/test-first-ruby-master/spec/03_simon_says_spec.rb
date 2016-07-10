@@ -33,7 +33,7 @@ describe "Simon says" do
       expect(shout("hello world")).to eq("HELLO WORLD")
     end
   end
-
+=begin
   describe "repeat" do
     it "should repeat" do
       expect(repeat("hello")).to eq("hello hello")
@@ -47,7 +47,7 @@ describe "Simon says" do
       expect(repeat("hello", 3)).to eq("hello hello hello")
     end
   end
-
+=end
   describe "start_of_word" do
     it "returns the first letter" do
       expect(start_of_word("hello", 1)).to eq("h")

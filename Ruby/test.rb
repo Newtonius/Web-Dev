@@ -165,7 +165,7 @@ puts f.to_s, g.to_s # Converts integers to string
 
 
 # Using methods on string classes
-puts "Testing the length of a string".length
+puts "Getting the length of a string".length
 puts "Turning everything uppercase".upcase
 
 
