@@ -19,8 +19,9 @@ def first_word(phrase)
 end
 
 def titleize(phrase)
-  small_words = ["and", "the", "over"]
-  phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ") if phrase.partition(" ").first == 
-end
+  if phrase.partition(" ").first == 'the'
+    small_words = ["and", "the", "over"]
+    first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
+  else
 
-first_word("Hello W")
+end
