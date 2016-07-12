@@ -22,6 +22,6 @@ def titleize(phrase)
   if phrase.partition(" ").first == 'the'
     small_words = ["and", "the", "over"]
     first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
-  else
-
+  elsif
+    print "what"
 end
