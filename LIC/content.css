@@ -105,6 +105,11 @@
                 font-size: 21pt;
             }
             
+            .serviceHeader {
+                max-width: 50%;
+                height: auto;
+            }
+            
             .cutWrapper {
                 margin: auto;
                 width: 100%;

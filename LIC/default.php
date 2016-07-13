@@ -86,16 +86,14 @@
                 -->
             </div>
             
-            
             <!-- HEADER [LOGO] -->
             <div id="header">
                 
                 <!-- LOGO-->
                 <span class="anchor" id="topAnchor"></span>
-                <center> 
+                <center>
                     <div id="logo_Container">
-                        <img src="GFX/LICLogo.png" id="logoFade" class="logo" alt=""/>
-                        <!-- <p>"Let us L.I.C your Tonsorials ;)"</p> -->
+                        <img src="GFX/Logo.png" id="logoFade" class="logo" alt=""/>
                     </div>
                 </center>
                 <br />
@@ -111,7 +109,7 @@
                      <ul>
                          <li>
                             <a href="#aboutSection">
-                                ~ Contact ~
+                                ~ About Us ~
                             </a></li><li>
                             <a href="#info">
                                ~ Services ~
@@ -194,6 +192,7 @@
                     <!--  SERVICES SECTION  -->
                     <span class="anchor" id="info"></span>
                     <section id="infoSection" class="sections">
+                        <!-- <img src="GFX/services_head.jpg" alt="Look your best!" class="serviceImage" /> -->
                         <article>
                             <div class="cutWrapper">
                                 <!-- CUTS LIST -->
