@@ -23,5 +23,7 @@ def titleize(phrase)
     small_words = ["and", "the", "over"]
     first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
   elsif
-    print "what"
+    small_words = ["and", "over"]
+    first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
+  end
 end
