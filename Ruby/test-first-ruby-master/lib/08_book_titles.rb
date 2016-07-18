@@ -1,3 +1,3 @@
 class Book
-  # TODO: your code goes here!
+  attr_accessor :title
 end

@@ -6,8 +6,8 @@ def shout(word)
   "#{word}".upcase
 end
 
-def repeat(word, rep = 1)
-
+def repeat(word, rep = 2)
+  ([word] * rep).join(" ")
 end
 
 def start_of_word(word, s)
@@ -22,7 +22,7 @@ def titleize(phrase)
   if phrase.partition(" ").first == 'the'
     small_words = ["and", "the", "over"]
     first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
-  elsif
+  else
     small_words = ["and", "over"]
     first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
   end
