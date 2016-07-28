@@ -1,3 +1,5 @@
-class Temperature
-  # TODO: your code goes here!
+class Temperature()
+  
 end
+
+in_fahrenheit = Temperature.new

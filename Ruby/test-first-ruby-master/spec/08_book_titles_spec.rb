@@ -21,7 +21,7 @@ describe Book do
   end
 
   describe "title" do
-    it "should c apitalize the first letter" do
+    it "should capitalize the first letter" do
       @book.title = "inferno"
       expect(@book.title).to eq("Inferno")
     end
