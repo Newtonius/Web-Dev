@@ -13,7 +13,7 @@
         border: 2px solid #fff;
         box-shadow: 0px 0px 5px #fff;
     }
-    */  
+    */
     #logo_Container img {
         -webkit-filter: brightness(102%);
         filter: brightness(102%);
@@ -40,7 +40,7 @@
         .bookAppt a ,.contact a:hover, visited {
             text-decoration: none;
         }
-        
+
         .bookAppt {
             font-family: 'IM Fell French Canon', serif;
             font-size: 15pt;
@@ -60,19 +60,19 @@
         .bookAppt a:hover {
             text-decoration: none;
         }
-        
-        
+
+
 @-webkit-keyframes fadeIn {
     0%{opacity: 0.0;}
     100%{opacity: 1.0;}
 }
 @keyframes fadeIn {
     0%{opacity: 0.0;}
-    100%{opacity: 1.0;} 
+    100%{opacity: 1.0;}
 }
 @keyframes panIn {
     0%{margin-top: -500px}
-    100%{margin-top: 0px} 
+    100%{margin-top: 0px}
 }
 
 @media screen and (max-height: 850px) {
@@ -97,7 +97,7 @@
 
 @media screen and (max-height: 750px) {
     #header {
-        height: 685px;
+        height: 100vh;
     }
 }
 
