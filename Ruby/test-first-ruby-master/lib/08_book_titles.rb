@@ -1,5 +1,3 @@
 class Book
-  def title
-    
-  end
+  attr_accesor :title
 end

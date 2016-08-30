@@ -19,11 +19,19 @@ def first_word(phrase)
 end
 
 def titleize(phrase)
-  if phrase.partition(" ").first == 'the'
-    small_words = ["and", "the", "over"]
-    first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
-  else
+
+  # Doesn't capitalize the first letters and the small words
+  if phrase.partition(" ").first != 'the'
     small_words = ["and", "over"]
     first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
+  else
+    small_words = ["and", "over", "the"]
+    first = phrase.split(" ").map { |word| small_words.include?(word) ? word : word.capitalize }.join(" ")
+    first.slice(0,1).capitalize + first.slice(1..-1)
+
+    # The method above allows me to keep all the nouns capitalized while this method:
+    # first.chomp
+    # first.capitalize!
+    # Capitailizes only the first word but lowercases the rest of the string [do not use then]
   end
 end
