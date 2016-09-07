@@ -1,7 +1,12 @@
-word =""
 def reverser
-  yield
+  yield.reverse
 end
-reverser do
-  word.reverse
+
+def adder
+  num = yield.adder
+  num + 1
+end
+
+def repeater
+    
 end

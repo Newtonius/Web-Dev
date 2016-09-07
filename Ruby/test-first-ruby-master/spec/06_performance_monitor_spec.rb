@@ -53,7 +53,7 @@ describe "Performance Monitor" do
   it "runs a block N times" do
     n = 0
 
-    measure(4) { n += 1 }
+    measure(4) { n += 1 } # what goes in the yield
 
     expect(n).to eq(4)
   end

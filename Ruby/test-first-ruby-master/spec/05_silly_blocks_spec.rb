@@ -8,6 +8,7 @@
 require "05_silly_blocks"
 
 describe "some silly block functions" do
+
   describe "reverser" do
     it "reverses the string returned by the default block" do
       result = reverser do
@@ -25,7 +26,7 @@ describe "some silly block functions" do
       expect(result).to eq("olleh yllod")
     end
   end
-
+  
   describe "adder" do
     it "adds one to the value returned by the default block" do
       expect(adder { 5 }).to eq(6)
