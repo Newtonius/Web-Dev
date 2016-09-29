@@ -3,10 +3,11 @@
 # Write a function that given an array, returns another array with each of the numbers multiplied by two. Don't change the original array, make sure you construct a copy!
 def array_times_two(array)
   if array[0] < 3
-     new_array = array.each { |element| print element * 2, " "}
-     print new_array
-     return new_array
+    # .map! takes the original array and modifies it.
+    new_array = array
+    new_array.map! {|a| a*2}
   else
+
   end
 end
 
@@ -22,7 +23,7 @@ puts dont_change_this == [3, 4, 5]
 
 # Write a function that given an array, now CHANGES each of the numbers to be twice as big. This should mutate the original array!
 def array_times_two!(array)
-
+  array.map! {|a| a*2}
 end
 
 # Tests
@@ -36,6 +37,8 @@ puts change_this == [12, 14, 16]
 
 # Write a function that given an array, returns another array of only the unique elements. I.e., return a version without duplicates.
 def uniq(array)
+  # & Returns a new array containing elements common to the two arrays, excluding any duplicates.
+  array & array
 end
 
 # Tests
@@ -51,9 +54,29 @@ puts uniq([1, 2, 1, 3, 3]) == [1, 2, 3]
 # You'll want to write a helper function that helps you determine which numbers are Slippery.
 
 def slippery_numbers(n)
+=begin
+  isSlippery = is_slippery(n)
+  if isSlippery == true
+
+  else
+
+  end
+=end
 end
 
 def is_slippery?(number)
+=begin
+  n = 0
+  i = 0
+  while n != number
+    if i % 3 == 0 || i % 5 == 0
+
+
+    else
+
+    end
+  end
+=end
 end
 
 # Tests
@@ -66,6 +89,9 @@ puts slippery_numbers(7) == [3, 5, 6, 9, 10, 12, 18]
 
 # Write a function that finds whether any two elements in the array sum to 0. If it does, return true; else, return false.
 def two_sum_to_zero?(array)
+  array.each do |number|
+    
+  end
 end
 
 # Tests
@@ -82,6 +108,7 @@ puts two_sum_to_zero?([0, 5]) == false
 # Reminder: you can convert an integer to a string using #to_s. You can convert a string back to an integer using #to_i.
 
 def magic_numbers(count)
+
 end
 
 def is_magic_number?(number)

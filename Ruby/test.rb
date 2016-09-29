@@ -268,7 +268,7 @@ while (i < third_array.length)
 end
   puts ""
 
-# USING 'p' instead of 'puts' !IMPORTANT!
+# USING 'p' instead of 'puts' !IMPORTANT! p shows you exactly what the computer sees
 p "You can use 'p' instead of 'puts' for debugging purposes!"
 
 # COMBINING ARRAYS

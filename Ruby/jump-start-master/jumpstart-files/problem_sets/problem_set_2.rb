@@ -1,6 +1,11 @@
 
 # Write a function that takes in a number and sums all the numbers up to that number
 def sum_to(number)
+  i = 1
+  k = 1
+  while i <= number
+    k
+  end
 end
 
 # Test - these should all print out true!
