@@ -24,6 +24,7 @@ puts reject_odds([2, 4, 6, 8, 10]) == [2, 4, 6, 8, 10]
 # Write a method that uses #reduce to sum up the numbers in an array
 
 def array_sum(array)
+  array.reduce(0, :+) {|sum, n| sum + n} # Can also use array.inject
 end
 
 puts "\nArray sum:\n" + "*" * 15 + "\n"
@@ -36,6 +37,7 @@ puts array_sum([5, 5, 5, 5, 5]) == 25
 # This method should *not* modify the original array
 
 def calculate_doubles(array)
+  
 end
 
 puts "\nCalculate doubles:\n" + "*" * 15 + "\n"
@@ -116,6 +118,7 @@ puts longest_word("one two three four five six seven") == "three"
 # Assume all letters will be lower case
 
 def count_vowels(string)
+
 end
 
 puts "\nCount vowels:\n" + "*" * 15 + "\n"
@@ -127,6 +130,7 @@ puts count_vowels("abcdefghijklmnopqrstuvwxyz") == 6
 # with five-letter words replaced with "#####"
 
 def redact_five_letter_words(string)
+
 end
 
 puts "\nRedact five letter words:\n" + "*" * 15 + "\n"
@@ -139,6 +143,23 @@ puts redact_five_letter_words("we the people in order to form a more perfect uni
 # Assume all letters are lower case.
 
 def most_common_vowel(string)
+  vowels = ['a','e','i','o','u','y']
+  a = 0, e = 0, i = 0, o = 0, u = 0, y = 0
+  string.each_char do |c|
+    if vowels.include?(c) == 'a'
+      a++
+    elsif vowels.include?(c) == 'e'
+      e++
+    elsif vowels.include?(c) == 'i'
+      i++
+    elsif vowels.include?(c) == 'o'
+      o++
+    elsif vowels.include?(c) == 'u'
+      u++
+    elsif vowels.include?(c) == 'y'
+      y++
+    end
+  end
 end
 
 puts "\nMost common vowel:\n" + "*" * 15 + "\n"
