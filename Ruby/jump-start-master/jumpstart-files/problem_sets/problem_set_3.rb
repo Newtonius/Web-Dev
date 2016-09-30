@@ -2,6 +2,7 @@
 # Write a method that takes an array of numbers as input and uses #select to return an array only of even numbers
 
 def get_evens(array)
+  array.select {|num| num%2==0 } # Selects all the numbers
 end
 
 puts "\nGet evens:\n" + "*" * 15 + "\n"
@@ -13,6 +14,7 @@ puts get_evens([1, 3, 5, 7, 9, 11]) == []
 # Write a method that takes an array of numbers as input and uses #reject to return an array of number that aren't odd
 
 def reject_odds(array)
+  array.reject {|num| num%2==0}
 end
 
 puts "\nReject odds:\n" + "*" * 15 + "\n"
@@ -37,7 +39,7 @@ puts array_sum([5, 5, 5, 5, 5]) == 25
 # This method should *not* modify the original array
 
 def calculate_doubles(array)
-  
+
 end
 
 puts "\nCalculate doubles:\n" + "*" * 15 + "\n"
@@ -143,6 +145,7 @@ puts redact_five_letter_words("we the people in order to form a more perfect uni
 # Assume all letters are lower case.
 
 def most_common_vowel(string)
+=begin
   vowels = ['a','e','i','o','u','y']
   a = 0, e = 0, i = 0, o = 0, u = 0, y = 0
   string.each_char do |c|
@@ -160,6 +163,7 @@ def most_common_vowel(string)
       y++
     end
   end
+=end
 end
 
 puts "\nMost common vowel:\n" + "*" * 15 + "\n"

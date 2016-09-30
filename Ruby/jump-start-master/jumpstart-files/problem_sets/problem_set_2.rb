@@ -4,7 +4,7 @@ def sum_to(number)
   i = 1
   k = 1
   while i <= number
-    k
+    i+=1
   end
 end
 
@@ -47,6 +47,8 @@ puts largest_pair([[-4,0],[-2,-1],[-3,2]]) == [-3,2]
 
 # Write a function that returns a phrase with each word (separated by spaces) capitalized.
 def capitalize_each_word(phrase)
+  new_phrase = capitalize(phrase)
+  
 end
 
 #Get these to true!!
@@ -62,6 +64,15 @@ puts dont_change_this == "do not mutate me"
 
 # Write a boolean function that returns true if an array of numbers has any multiples of 3.
 def has_multiple_of_three?(numbers)
+
+  numbers.each do |num|
+    if num%3==0
+      return true
+    end
+  end
+
+  return false
+
 end
 
 #Tests - More trues
@@ -98,6 +109,7 @@ puts evens_and_odds([1,2,3]) == {'even' => 1, 'odd' => 2}
 # Write a function that takes in a word and returns the counts of each letter in that word.
 
 def letter_counts(word)
+
 end
 
 # Tests must all print true

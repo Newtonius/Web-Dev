@@ -2,6 +2,7 @@
 
 # Write a function that given an array, returns another array with each of the numbers multiplied by two. Don't change the original array, make sure you construct a copy!
 def array_times_two(array)
+
   if array[0] < 3
     # .map! takes the original array and modifies it.
     new_array = array
@@ -90,7 +91,7 @@ puts slippery_numbers(7) == [3, 5, 6, 9, 10, 12, 18]
 # Write a function that finds whether any two elements in the array sum to 0. If it does, return true; else, return false.
 def two_sum_to_zero?(array)
   array.each do |number|
-    
+
   end
 end
 
