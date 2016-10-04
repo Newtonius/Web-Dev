@@ -19,19 +19,13 @@ end
 #     * How does this compare with the #each method in arrays
 #   * What will the implicit return value of #muni_routes be if we get rid of
 #     the nil on line 14?
-
-
-
 # -----------------
-
-
-
 # Largest Factor
 # ----------------------------------------
 # Write a method, #largest_factor, that accepts an integer as an argument and returns
 # the largest factor of that integer
 
-def largest_factor(n)
+dedf largest_factor(n)
   (n - 1).downto(1) do |possible_factor|
     return possible_factor if n % possible_factor == 0
   end

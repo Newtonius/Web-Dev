@@ -30,7 +30,7 @@
 # case).
 
 def word_with_most_repeats(sentence)
-  sentence.each_char
+  
 end
 
 puts "-------Word With Most Repeats-------"

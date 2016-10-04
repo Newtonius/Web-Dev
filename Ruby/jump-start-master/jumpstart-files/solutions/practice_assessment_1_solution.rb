@@ -16,7 +16,6 @@
 # Look at the test cases below the problem before you approach it.
 # Use the debugger when code doesn't run how you expect.
 # ------------------------------------------------------------------------------
-
 # Word With Most Repeats
 # ------------------------------------------------------------------------------
 # Given a sentence, find which word has the greatest amount of repeated letters.

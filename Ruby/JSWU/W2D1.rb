@@ -7,11 +7,10 @@
 # could get you to your brunch spot. If none exist, return nil.
 
 def muni_routes(routes, destination)
-  new_hash = {}
   routes.each do |route_number, route|
-    new_hash[route] = route_number
-    
+    return route_number if route == destination
   end
+  nil # If no route goes to destination
 end
 
 puts "---------Muni Routes----------"
@@ -23,15 +22,15 @@ puts muni_routes({10 => "Good Luck Dim Sum", 25 => "Art's Cafe"}, "Japanese Tea 
 
 
 # ----------------- Switch Roles!
-
-
-
 # Largest Factor
 # ----------------------------------------
 # Write a method, #largest_factor, that accepts an integer as an argument and returns
 # the largest factor of that integer
 
 def largest_factor(n)
+  (n-1).downto(1) do |factors|
+    return factors if n % factors == 0
+  end
 end
 
 puts "---------Muni Routes----------"
