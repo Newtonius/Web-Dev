@@ -55,29 +55,18 @@ puts uniq([1, 2, 1, 3, 3]) == [1, 2, 3]
 # You'll want to write a helper function that helps you determine which numbers are Slippery.
 
 def slippery_numbers(n)
-=begin
-  isSlippery = is_slippery(n)
-  if isSlippery == true
-
-  else
-
+  slippery_array = []
+  number = 1 # Number to check that'll go into the array
+  until slippery_array.length == n
+    slippery_array << number if is_slippery?(number) # Only put in the number if it meets the condition
+    number += 1
   end
-=end
+  slippery_array
 end
 
 def is_slippery?(number)
-=begin
-  n = 0
-  i = 0
-  while n != number
-    if i % 3 == 0 || i % 5 == 0
-
-
-    else
-
-    end
-  end
-=end
+  (number % 3 == 0 || number % 5 == 0) && number % 15 != 0
+  # if it is both evenly divisble by 3, 5, but not by 15 since 15 has both 3 and 5 (it should only be divisible by 3 or 5)
 end
 
 # Tests
@@ -90,9 +79,12 @@ puts slippery_numbers(7) == [3, 5, 6, 9, 10, 12, 18]
 
 # Write a function that finds whether any two elements in the array sum to 0. If it does, return true; else, return false.
 def two_sum_to_zero?(array)
-  array.each do |number|
-
+  array.each_with_index do |number1, index1| # Itterate at the first index
+    array.each_with_index do |number2, index2| # Itterate through each index comparing it to the first got index from the first loop
+      return true if (number1 + number2 == 0) && index1 != index2
+    end
   end
+  false
 end
 
 # Tests
