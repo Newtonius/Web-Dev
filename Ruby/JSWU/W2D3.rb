@@ -25,7 +25,16 @@ puts longest_segment('this is a string',' ') == "string"
 # and returns the smallest prime number that is greater than n
 
 def next_prime(n)
+  prime_num = []
+  smallest = 1
+
   
+
+
+end
+
+def isPrime?(num)
+
 end
 
 puts "---------Next Prime----------"

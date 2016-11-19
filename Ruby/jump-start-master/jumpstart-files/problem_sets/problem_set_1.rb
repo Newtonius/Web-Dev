@@ -4,7 +4,9 @@
 def array_times_two(array)
 
   if array[0] < 3
-    # .map! takes the original array and modifies it.
+    # .map! takes the original array and modifies it retuing the modified array.
+    # .each returns the original array even if code were to modify the indexes inside it.
+    # .map creates a copy of thhe original array, and returns that copy modified by the code within the block
     new_array = array
     new_array.map! {|a| a*2}
   else
@@ -101,10 +103,14 @@ puts two_sum_to_zero?([0, 5]) == false
 # Reminder: you can convert an integer to a string using #to_s. You can convert a string back to an integer using #to_i.
 
 def magic_numbers(count)
-
+  is_magic_number?(25)
 end
 
 def is_magic_number?(number)
+  test_number = []
+  test_number = number.split
+  p test_number
+
 end
 
 # Tests

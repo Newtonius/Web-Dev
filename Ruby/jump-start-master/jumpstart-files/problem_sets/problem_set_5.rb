@@ -1,6 +1,17 @@
 # chunk an array into nested arrays of length n
 def chunk(array, n)
-
+  chunk = []
+  results = []
+  array.each do |element|
+    if chunk.length == n
+      results << chunk
+      chunk = []
+    end
+    chunk << element
+  end
+  p chunk
+  results << chunk
+  p results
 end
 
 puts "---------chunk-------"
@@ -9,6 +20,7 @@ puts chunk([10, 9, 8, 7, 6, 5, 4], 3) == [[10, 9, 8], [7, 6, 5], [4]]
 
 # Translate into pig-latin! First consonants go to the end of a word. End with "ay"
 def pig_latin(sentence)
+  
 end
 
 puts "---------pig latin-------"
