@@ -38,7 +38,7 @@
                     <div class='content'>
                         <p>
                             Click on the present below to see your Christmas gift!
-                        </p>
+ </p>
                         <a href="Sub/Gift/Gift.php" target="_parent">
                             <img src="GFX/siteGFX/gift-icon.png">
                         </a>

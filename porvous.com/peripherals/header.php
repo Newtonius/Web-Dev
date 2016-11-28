@@ -25,17 +25,15 @@
 <header>
     <div>
         <ul id="mainNavBar">
-          <!--
-			       <a href="http://Porvous.com/Home.php" target="_self">
+			       <a href="http://Porvous.com/index.php" target="_self">
                 <li>
                     <p>
                         Home
                     </p>
                 </li>
               </a>
-            -->
               <?php
-                $navTab = array("Home", "Gallery","Travel","Contact");
+                $navTab = array( "Gallery","Travel","Contact");
                 for($i=1; $i<=count($navTab); $i++):
                   ?>
               <a href="http://Porvous.com/<?php echo $navTab[$i-1] ?>.php" target="_self">
