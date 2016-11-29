@@ -26,7 +26,7 @@
 
       <div class="message">
 
-        Email not sent!
+        Submission sent!
 
       </div>
 

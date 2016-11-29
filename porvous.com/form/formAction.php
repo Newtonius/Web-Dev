@@ -6,7 +6,7 @@ require_once 'lib/PHPMailerAutoload.php';
 $errors = [];
 
 if(isset($_POST['name'], $_POST['email'], $_POST['message'])) {
-		
+
 	// Array of required fields
 	$fields = [
 		'Name' => $_POST['name'],
@@ -32,7 +32,7 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message'])) {
 		$m->SMTPAuth = true;
 
 		$m->Host = 'smtp.gmail.com';
-		$m->Username = 'anbolanos235@gmail.com';
+	  $m->Username = 'anbolanos235@gmail.com';
 		$m->Password = 'Deoxyribonucleicacid235';
 		$m->SMTPSecure = 'ssl';
 		$m->Port = 465;
@@ -46,10 +46,10 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message'])) {
 
 		//$m->AddReplyTo($fields['Email'], $fields['Name']);
 
-		$m->AddADdress('anbolanos235@gmail.com', 'Angel Bolanos');
+		$m->AddAddress('anbolanos235@gmail.com', 'Angel Bolanos');
 
 		if($m->send()) {
-			header('Location: thanks.php');
+			header('Location: submission_sent.php');
 			die();
 		} else {
 			header('Location: error.php');
